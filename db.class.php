@@ -8,6 +8,7 @@ class db{
     //执行sql语句的方法
     public function Query($sql,$type = 1){
         $db = new mysqli($this->host,$this->zhang,$this->mima,$this->dbname);
+        //设置数据库编码
         mysqli_set_charset($db,'utf8');
         $r  = $db->query($sql);
         if($type == "1"){
